@@ -15,11 +15,10 @@
 <!--Nav Bar with links-->
 <nav>
     <ul>
-        <li><a href="#C0" style="color: rgb(255, 192, 192);">Angelica Gutierrez</a></li>
+        <li><a href="#C1" style="color: rgb(255, 192, 192);">Angelica Gutierrez</a></li>
         <li style="float:right"><a href="#C4"> Contact </a></li>
         <li style="float:right"><a href="#C3"> Resume </a></li>
         <li style="float:right"><a href="#C2"> Projects </a></li>
-        <li style="float:right"><a href="#C1"> About </a></li>
     </ul>
 </nav>
 
@@ -72,41 +71,23 @@
         </div>
     </div>
 
-    <div class="experience" style="padding: 50px;">
-        <h3>Experiences In Languages</h3>
-        <div class="row">
-            <div class="column">
-                <img src="images/Circles/Slide5.PNG" alt="HTML" style="width:80%">
-            </div>
-            <div class="column">
-                <img src="images/Circles/Slide6.PNG" alt="CSS" style="width:80%">
-            </div>
-            <div class="column">
-                <img src="images/Circles/Slide7.PNG" alt="JavaScript" style="width:80%">
-            </div>
-            <div class="column">
-                <img src="images/Circles/Slide8.PNG" alt="Python" style="width:80%">
-            </div>
-            <div class="column">
-                <img src="images/Circles/Slide9.PNG" alt="C++" style="width:80%">
-                
-            </div>
+    <div class="experience-container" style="padding: 50px;">
+        <div class="experience">
+            <h3>Experiences In Languages</h3>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>Python</p>
         </div>
-
-        <h3>Experiences In Programs</h3>
-        <div class="row">
-            <div class="column">
-                <img src="images/Circles/Slide1.PNG" alt="Adobe Creative Suite" style="width:80%">
-            </div>
-            <div class="column">
-                <img src="images/Circles/Slide2.PNG" alt="Microsoft Suite" style="width:80%">
-            </div>
-            <div class="column">
-                <img src="images/Circles/Slide3.PNG" alt="Google Suite" style="width:80%">
-            </div>
-            <div class="column">
-                <img src="images/Circles/Slide4.PNG" alt="And More" style="width:80%">
-            </div>
+        <br>
+        <div class="experience">
+            <h3>Experiences In Programs</h3>
+            <p>Adobe Creative Suite</p>
+            <p>Microsoft Office</p>
+            <p>Google Suite</p>
+            <p>Visual Studio Code</p>
+            <p>MongoDB</p>
+            <p></p>
         </div>
     </div>
 
@@ -116,7 +97,7 @@
     <div class="container" style="padding: 50px;">
         <h2 id="C2"><br><br>Projects</h2>
         <aside style="padding: 20px;">
-            <h1>Art</h1>
+            <h1>Illustrator + PhotoShop</h1>
             <p>From Adobe Illustrate to Photoshop, it was about learning the basics in order to let my mind create.
             </p>
         </aside>
@@ -168,7 +149,7 @@
         <br>
 
         <aside>
-            <h1>Website</h1>
+            <h1>Websites</h1>
             <p>HonorsBook was created for students by students. From being a team member with no experience to leading
                 the project and getting the basic pages planned and created, HonorsBook is one of my favorite projects,
                 I have had the pleasure to be a part of.</p>
@@ -197,7 +178,7 @@
         <br>
 
         <aside style="padding: 20px;">
-            <h1>Prototypes + Mock Ups Projects</h1>
+            <h1>Prototypes + Mock Ups</h1>
             <p>Having a plan is always important before diving into projects. I have created mockups using Adobe
                 PhotoShop and Illustrator. Prototyping and wireframing is done through Adobe XD.
             </p>
@@ -229,7 +210,8 @@
             <figure>
                 <img src="images/projects/learning language app.png"
                     style="width: 100%; height: auto; object-fit: cover;">
-                <figcaption>Splash Screen/Log In process for fictional language learning app.</figcaption>
+                <figcaptio
+                n>Splash Screen/Log In process for fictional language learning app.</figcaption>
             </figure>
             <figure>
                 <img src="images/projects/rosecafemockup.png" style="width: 100%; height: auto; object-fit: cover;">
@@ -315,9 +297,8 @@
             <p>Gold Level Presidential Volunteer Service Award, San Bernardino, CA | June 2019, June 2020</p>
 
             <br><br>
-            <a href="../document/Angelica_Gutierrez_Resume.pdf" class="button">Download Resume</a>
+            <!-- <a href="../document/Angelica_Gutierrez_Resume.pdf" class="button">Download Resume</a>-->
         </div>
-
         <!-- Contact Section-->
         <h2 id="C4"><br><br>Contact</h2>
         <h3 style="text-align:center" ;>Let's Start a Conversation</h3>
@@ -367,8 +348,7 @@
         font-style: normal;
     }
 
-
-    .about {
+       .about {
         padding: 10px;
         /* Adds space inside the container */
         width: 100%;
@@ -386,6 +366,22 @@
         /* Ensures proper alignment */
         margin: 0 auto;
         /* Centers the image if needed */
+    }
+
+
+    .experience-container {
+        display: flex;
+        gap: 20px;
+        /* Adds space between the two sections */
+        flex-wrap: wrap;
+        /* Ensures responsiveness on smaller screens */
+    }
+
+    .experience {
+        flex: 1;
+        /* Allows equal space for both sections */
+        min-width: 300px;
+        /* Ensures a minimum width for smaller devices */
     }
 
     ul {
@@ -424,7 +420,6 @@
         margin-top: 30px;
 
     }
-
 
 
     .container li {
@@ -538,6 +533,9 @@
 
     @media (max-width: 768px) {
 
+        nav ul li a {
+        font-size: 14px; /* Adjust size for tablets and smaller devices */
+    }
         /* Make the grid single-column for smaller screens */
         .grid {
             grid-template-columns: 1fr;
@@ -570,10 +568,10 @@
             order: 1;
             margin-left: 1em;
             float: right;
-            /* fallback */
+
         }
 
-        /* clearfix for fallback */
+
         .image-right::after {
             content: "";
             display: block;
@@ -590,4 +588,6 @@
 
         }
     }
+
+   
 </style>
